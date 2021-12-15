@@ -1,0 +1,31 @@
+[
+    {
+        "title": "Usuarios",
+        "icon": "shopping-cart-outline",
+        "link": "/users",
+        "home": true
+    },
+    {
+        "title": "Pagos",
+        "icon": "home-outline",
+        "link": "/payments"
+    },
+    {
+        "title": "FUTUROS",
+        "group": true
+    },
+    {
+        "title": "Layout",
+        "icon": "layout-outline",
+        "children": [
+            {
+                "title": "Stepper",
+                "link": "/payments"
+            },
+            {
+                "title": "List",
+                "link": "/pages/layout/list"
+            }
+        ]
+    }
+]

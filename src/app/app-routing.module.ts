@@ -1,7 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NbAuthComponent } from '@nebular/auth';
+import { HomePageComponent } from './modules/home/pages/home-page/home-page.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'auth', //TODO (Public) Login, Register, Forgot...
+    component: NbAuthComponent,
+    loadChildren: () => import(`./modules/auth/auth.module`).then(m => m.AuthModule)
+  },
+  {
+    path: '',//TODO (Private) 🔴🔴
+    component: HomePageComponent,
+    loadChildren: () => import(`./modules/home/home.module`).then(m => m.HomeModule),
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

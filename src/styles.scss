@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'assets/themes';
+@import '~@nebular/theme/styles/globals';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/grid';
+
+// loading progress bar theme
+@import 'assets/pace.theme';
+
+@import 'assets/partials/layout';
+@import 'assets/partials/overrides';
+
+
+@include nb-install() {
+    @include nb-theme-global();
+
+    @include ngx-layout();
+    // loading progress bar
+    @include ngx-pace-theme();
+
+    @include nb-overrides();
+};
