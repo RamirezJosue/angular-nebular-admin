@@ -10,6 +10,10 @@ const routes: Routes = [
     path: 'payments',
     loadChildren: () => import('@modules/payments/payments.module').then(m => m.PaymentsModule)
   },
+  {
+    path: 'charts',
+    loadChildren: () => import('@modules/chartjs/chartjs.module').then(m => m.ChartjsModule)
+  }
 ];
 
 @NgModule({

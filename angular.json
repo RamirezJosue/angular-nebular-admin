@@ -32,6 +32,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/roboto-fontface/css/roboto/roboto-fontface.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -100,6 +101,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/roboto-fontface/css/roboto/roboto-fontface.css",
               "src/styles.scss"
             ],
             "scripts": []

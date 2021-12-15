@@ -1,0 +1,15 @@
+@import '../../../../../assets/themes';
+
+@include nb-install-component() {
+    app-echart-pie,
+    app-echart-bar {
+        display: block;
+        height: nb-theme(card-height-medium);
+        width: 100%;
+    }
+
+    ::ng-deep .echart {
+        height: 100%;
+        width: 100%;
+    }
+}

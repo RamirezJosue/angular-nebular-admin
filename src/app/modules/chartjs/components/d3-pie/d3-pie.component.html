@@ -1,0 +1,17 @@
+<ngx-charts-pie-chart
+  [view]="[700,400]"
+  [scheme]="colorScheme"
+  [results]="data"
+  [gradient]="gradient"
+  [legend]="showLegend"
+  [legendPosition]="legendPosition"
+  [labels]="showLabels"
+  [doughnut]="isDoughnut"
+  [contentEditable]="contentEditable"
+  [legendTitle]="legendTitle"
+  [animations]="true"
+  (select)="onSelect($event)"
+  (activate)="onActivate($event)"
+  (deactivate)="onDeactivate($event)"
+  >
+</ngx-charts-pie-chart>

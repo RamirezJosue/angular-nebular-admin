@@ -3,9 +3,8 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { OneColumnComponent } from './layouts/one-column/one-column.component';
 
 import {
-  CORPORATE_THEME,
-  COSMIC_THEME, DARK_THEME,
-  DEFAULT_THEME, NbActionsModule,
+  COSMIC_THEME,
+  NbActionsModule,
   NbButtonModule, NbContextMenuModule,
   NbIconModule, NbLayoutModule,
   NbMenuModule, NbSearchModule,
@@ -15,6 +14,9 @@ import {
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { DEFAULT_THEME } from './util/theme.default';
+import { CORPORATE_THEME } from './util/theme.corporate';
+import { DARK_THEME } from './util/theme.dark';
 
 
 const NB_MODULES = [

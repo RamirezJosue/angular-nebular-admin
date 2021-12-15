@@ -15,17 +15,21 @@
         "group": true
     },
     {
-        "title": "Layout",
-        "icon": "layout-outline",
+        "title": "Charts",
+        "icon": "pie-chart-outline",
         "children": [
-            {
-                "title": "Stepper",
-                "link": "/payments"
-            },
-            {
-                "title": "List",
-                "link": "/pages/layout/list"
-            }
+          {
+            "title": "Echarts",
+            "link": "/charts/echarts"
+          },
+          {
+            "title": "Charts.js",
+            "link": "/charts/chartjs"
+          },
+          {
+            "title": "D3",
+            "link": "/charts/d3"
+          }
         ]
-    }
+      }
 ]
