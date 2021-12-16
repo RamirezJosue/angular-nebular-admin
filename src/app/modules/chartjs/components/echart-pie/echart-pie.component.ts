@@ -20,6 +20,7 @@ export class EchartPieComponent implements AfterViewInit, OnDestroy {
     this.themeSubscription$ = this.theme.getJsTheme().subscribe((config: any) => {
       const { variables } = config;
       const { echarts } = variables;
+      // data: ['Pendiente', 'Aprobado', 'Autorizado', 'En Proceso', 'En revisión', 'Finalizado', 'Rechazado'],
       this.options = {
         backgroundColor: echarts.bg,
         color: [variables.warningLight, variables.infoLight, variables.dangerLight, variables.successLight, variables.primaryLight],
@@ -30,7 +31,7 @@ export class EchartPieComponent implements AfterViewInit, OnDestroy {
         legend: {
           orient: 'vertical',
           left: 'left',
-          data: ['USA', 'Germany', 'France', 'Canada', 'Russia'],
+          data: ['Pendiente', 'Aprobado', 'Autorizado', 'En Proceso', 'En revisión', 'Finalizado', 'Rechazado'],
           textStyle: {
             color: echarts.textColor,
           },
@@ -42,11 +43,13 @@ export class EchartPieComponent implements AfterViewInit, OnDestroy {
             radius: '80%',
             center: ['50%', '50%'],
             data: [
-              { value: 335, name: 'Germany' },
-              { value: 310, name: 'France' },
-              { value: 234, name: 'Canada' },
-              { value: 135, name: 'Russia' },
-              { value: 1548, name: 'USA' },
+              { value: 335, name: 'Pendiente' },
+              { value: 310, name: 'Aprobado' },
+              { value: 234, name: 'Autorizado' },
+              { value: 135, name: 'En Proceso' },
+              { value: 300, name: 'En revisión' },
+              { value: 265, name: 'Finalizado' },
+              { value: 156, name: 'Rechazado' }
             ],
             itemStyle: {
               emphasis: {
