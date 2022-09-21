@@ -1,1 +1,27 @@
-<p>payments-page works!</p>
+<nb-card>
+    <nb-card-body>
+        <form [formGroup]="form">
+            <nb-stepper #stepper [linear]="linearMode">
+                <nb-step formArrayName="items" 
+                    *ngFor="let item of form.controls.items.controls; let i = index">
+                    <ng-container [formGroupName]="i">
+                        <!-- <button nbButton (click)="change(item.controls.compromiso_titulo.value)">change</button> -->
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto neque excepturi ad. Fugiat
+                        nulla impedit deleniti minima quidem beatae sit neque aperiam nam maiores quis, quia a eaque
+                        deserunt porro.
+                        <br>
+                        <nb-checkbox formControlName="aceptado" status="warning">
+                            {{item.controls.compromiso_titulo.value}}
+                        </nb-checkbox>
+                        <br>
+                        <button nbButton nbStepperPrevious>prev</button>
+                        <button nbButton nbStepperNext>next</button>
+                    </ng-container>
+                    
+                </nb-step>
+            </nb-stepper>
+            <button nbButton status="primary" [disabled]="items.invalid" (click)="enviar()">Continuar matricula</button>
+        </form>
+        
+    </nb-card-body>
+</nb-card>
