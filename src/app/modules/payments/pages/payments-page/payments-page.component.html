@@ -1,7 +1,7 @@
 <nb-card>
     <nb-card-body>
         <form [formGroup]="form">
-            <nb-stepper #stepper [linear]="linearMode">
+            <nb-stepper #stepper [linear]="linearMode" (stepChange)="emitirChange($event)">
                 <nb-step formArrayName="items" 
                     *ngFor="let item of form.controls.items.controls; let i = index">
                     <ng-container [formGroupName]="i">

@@ -1,14 +1,36 @@
 <nb-card>
-    <nb-card-header>Button Colors</nb-card-header>
-    <nb-card-body class="example-items-rows">
-      <button nbButton status="basic">basic</button>
-      <button nbButton status="primary">Primary</button>
-      <button nbButton status="success">Success</button>
-      <button nbButton status="info">Info</button>
-      <button nbButton status="warning">Warning</button>
-      <button nbButton status="danger">Danger</button>
-      <div class="control-status-example">
-        <button nbButton status="control">Control</button>
-      </div>
-    </nb-card-body>
-  </nb-card>
+  <nb-card-header>Select All</nb-card-header>
+  <nb-card-body class="example-items-rows">
+    <form [formGroup]="form">
+      <nb-checkbox formControlName="selectAll" status="primary">Seleccionar todo</nb-checkbox>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Select</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">usuario</th>
+          </tr>
+        </thead>
+        <tbody formArrayName="users">
+          <tr *ngFor="let user of userArray.controls; let i = index">
+            <ng-container [formGroupName]="i">
+              <th>
+                <nb-checkbox formControlName="selected" status="primary"></nb-checkbox>
+              </th>
+              <td>
+                <!-- {{user.value.name}} -->
+                <input fieldSize="small" type="text" nbInput fullWidth status="primary" formControlName="name">
+              </td>
+              <td>
+                <!-- {{user.value.username}} -->
+                <input fieldSize="small" type="text" nbInput fullWidth status="primary" formControlName="username">
+              </td>
+            </ng-container>
+          </tr>
+
+        </tbody>
+      </table>
+    </form>
+    <button [disabled]="disabled" nbButton status="primary" (click)="onSubmit()"> Guardar</button>
+  </nb-card-body>
+</nb-card>

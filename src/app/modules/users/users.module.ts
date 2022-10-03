@@ -4,7 +4,8 @@ import { CommonModule } from '@angular/common';
 import { UsersRoutingModule } from './users-routing.module';
 import { UserPageComponent } from './pages/user-page/user-page.component';
 import { UsersPageComponent } from './pages/users-page/users-page.component';
-import { NbButtonModule, NbCardModule } from '@nebular/theme';
+import { NbButtonModule, NbCardModule, NbCheckboxModule, NbInputModule } from '@nebular/theme';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,7 +17,10 @@ import { NbButtonModule, NbCardModule } from '@nebular/theme';
     CommonModule,
     UsersRoutingModule,
     NbCardModule,
-    NbButtonModule
+    NbButtonModule,
+    ReactiveFormsModule,
+    NbCheckboxModule,
+    NbInputModule
   ]
 })
 export class UsersModule { }

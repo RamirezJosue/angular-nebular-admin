@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NbStepChangeEvent } from '@nebular/theme';
 
 @Component({
   selector: 'app-payments-page',
@@ -10,6 +11,7 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class PaymentsPageComponent implements OnInit {
 
   linearMode = true;
+  index!: number;
 
   data: any[] = [
     {
@@ -83,5 +85,10 @@ export class PaymentsPageComponent implements OnInit {
     const form = { id_alumno: 210122, id_periodo: 3, compromisos: this.items.value};
     console.log('form',form);
 
+  }
+
+  emitirChange(e: NbStepChangeEvent) {
+    this.index = e.previouslySelectedIndex;
+    console.log()
   }
 }
