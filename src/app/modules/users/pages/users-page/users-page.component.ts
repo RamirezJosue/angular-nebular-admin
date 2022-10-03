@@ -27,12 +27,16 @@ export class UsersPageComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.patchValue();
+    this.onChange();
+  }
+
+  patchValue() {
     this.users.forEach(({ username, name, selected }) => {
       this.userArray.push(
         this.fb.group({ username, name, selected })
       )
     });
-    this.onChange();
   }
 
   onChange() {
