@@ -4,12 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { SharedModule } from 'src/app/shared/shared.module';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
 import { NgProgressModule } from 'ngx-progressbar';
-import { NbAuthModule } from '@nebular/auth';
-import { FormsModule } from '@angular/forms';
+import { ScaffoldModule } from './core/scaffold/scaffold.module';
 
 @NgModule({
   declarations: [
@@ -19,11 +17,9 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule,
     HttpClientModule,
     NgProgressModule,
-    NbAuthModule.forRoot(),
-    FormsModule
+    ScaffoldModule.forRoot()
   ],
   providers: [
     {

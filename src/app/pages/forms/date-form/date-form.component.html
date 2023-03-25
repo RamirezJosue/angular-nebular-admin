@@ -1,0 +1,11 @@
+<nb-card>
+    <nb-card-body>
+        <input [formControl]="date" nbInput placeholder="Pick Date" [nbDatepicker]="dateTimePicker">
+        <nb-datepicker #dateTimePicker></nb-datepicker>
+        <br>
+        <br>
+        <br>
+        <br>
+        <button (click)="onSubmit()" nbButton status="primary"> Guardar</button>
+    </nb-card-body>
+</nb-card>

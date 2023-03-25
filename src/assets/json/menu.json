@@ -1,35 +1,45 @@
 [
-    {
-        "title": "Usuarios",
-        "icon": "shopping-cart-outline",
-        "link": "/users",
-        "home": true
-    },
-    {
-        "title": "Pagos",
-        "icon": "home-outline",
-        "link": "/payments"
-    },
-    {
-        "title": "FUTUROS",
-        "group": true
-    },
-    {
-        "title": "Charts",
-        "icon": "pie-chart-outline",
-        "children": [
-          {
-            "title": "Echarts",
-            "link": "/charts/echarts"
-          },
-          {
-            "title": "Charts.js",
-            "link": "/charts/chartjs"
-          },
-          {
-            "title": "D3",
-            "link": "/charts/d3"
-          }
-        ]
+  {
+    "title": "Usuarios",
+    "icon": "shopping-cart-outline",
+    "link": "/pages/users",
+    "home": true
+  },
+  {
+    "title": "Pagos",
+    "icon": "home-outline",
+    "link": "/pages/payments"
+  },
+  {
+    "title": "FUTUROS",
+    "group": true
+  },
+  {
+    "title": "Formularios",
+    "icon": "list-outline",
+    "children": [
+      {
+        "title": "Fecha",
+        "link": "/pages/form/date"
       }
+    ]
+  },
+  {
+    "title": "Charts",
+    "icon": "pie-chart-outline",
+    "children": [
+      {
+        "title": "Echarts",
+        "link": "/pages/charts/echarts"
+      },
+      {
+        "title": "Charts.js",
+        "link": "/pages/charts/chartjs"
+      },
+      {
+        "title": "D3",
+        "link": "/pages/charts/d3"
+      }
+    ]
+  }
 ]
